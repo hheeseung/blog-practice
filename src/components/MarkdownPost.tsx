@@ -14,7 +14,7 @@ export default function MarkdownPost({ posts }: Props) {
   return (
     <Markdown
       remarkPlugins={[remarkGfm]}
-      className="prose-lg prose-headings:font-bold prose-code:bg-neutral-100 prose-code:rounded-md prose-code:px-1 prose-blockquote:border-l-4 prose-a:underline"
+      className="prose-lg prose-headings:font-bold prose-code:bg-neutral-100 prose-code:rounded-md prose-code:px-1 prose-blockquote:border-l-4 prose-a:underline prose-li:list-disc"
       children={posts.content}
       components={{
         code(props: any) {

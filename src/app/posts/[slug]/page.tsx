@@ -12,7 +12,7 @@ export default async function PostDetailPage({ params: { slug } }: Props) {
   const posts = await getPostDetails(slug);
 
   return (
-    <section className="rounded-xl shadow-lg mt-2 mb-5">
+    <section className="rounded-xl shadow-lg mt-2 mb-10">
       <Image
         src={`/images/posts/${posts.path}.png`}
         alt="banner"
@@ -28,13 +28,17 @@ export default async function PostDetailPage({ params: { slug } }: Props) {
         }}
         priority
       />
-      <div className="relative p-4">
-        <span className="absolute right-4">{posts.date}</span>
+      <div className="relative px-5 py-10">
+        <span className="absolute right-6">{posts.date}</span>
         <h1 className="text-5xl font-bold">{posts.title}</h1>
         <p className="text-xl font-semibold border-b-2 border-sky-500 py-2 mb-2 w-fit">
           {posts.description}
         </p>
         <MarkdownPost posts={posts} />
+      </div>
+      <div>
+        <div>prev</div>
+        <div>next</div>
       </div>
     </section>
   );
