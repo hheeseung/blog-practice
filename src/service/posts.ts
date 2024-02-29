@@ -1,4 +1,3 @@
-import { metadata } from "./../app/layout";
 import path from "path";
 import { promises as fs, readFile } from "fs";
 
@@ -16,7 +15,13 @@ export type PostData = Post & { content: string };
 export async function getPosts(): Promise<Post[]> {
   const filePath = path.join(process.cwd(), "data", "posts.json");
   const data = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(data);
+
+  const posts: Post[] = JSON.parse(data);
+  return posts.sort((a, b) => {
+    const date1 = new Date(a.date).getTime();
+    const date2 = new Date(b.date).getTime();
+    return date2 - date1;
+  });
 }
 
 export async function getFeaturedPosts(): Promise<Post[]> {
