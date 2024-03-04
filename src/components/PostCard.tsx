@@ -18,7 +18,7 @@ export default function PostCard({
 }: Card) {
   return (
     <Link href={`/posts/${path}`}>
-      <li className="text-center shadow-md rounded-md hover:scale-105 transition-all">
+      <div className="text-center shadow-md rounded-md hover:scale-105 transition-all">
         <Image
           className="mx-auto rounded-ss-md rounded-se-md"
           src={`/images/posts/${path}.png`}
@@ -34,7 +34,7 @@ export default function PostCard({
             {category}
           </span>
         </div>
-      </li>
+      </div>
     </Link>
   );
 }
