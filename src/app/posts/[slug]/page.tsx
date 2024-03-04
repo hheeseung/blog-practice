@@ -1,4 +1,5 @@
 import MarkdownPost from "@/components/MarkdownPost";
+import PageNav from "@/components/PageNav";
 import { getPostDetails } from "@/service/posts";
 import Image from "next/image";
 
@@ -36,10 +37,7 @@ export default async function PostDetailPage({ params: { slug } }: Props) {
         </p>
         <MarkdownPost posts={posts} />
       </div>
-      <div>
-        <div>prev</div>
-        <div>next</div>
-      </div>
+      <PageNav path={slug} />
     </section>
   );
 }
