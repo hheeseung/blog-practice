@@ -11,6 +11,7 @@ export default function Profile() {
         width={200}
         height={200}
         className="mt-2 rounded-full"
+        priority
       />
       <div className="mt-2 text-center">
         <h2 className="text-2xl font-bold ">안녕하세요, 하희승입니다.</h2>
