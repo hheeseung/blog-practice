@@ -37,7 +37,7 @@ export default async function PostDetailPage({ params: { slug } }: Props) {
         </p>
         <MarkdownPost posts={posts} />
       </article>
-      <PageNav path={slug} />
+      <PageNav posts={posts} />
     </section>
   );
 }
