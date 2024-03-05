@@ -20,7 +20,7 @@ export default function Navbar() {
           <li className={`${pathname === "/about" && BORDER}`}>About</li>
         </Link>
         <Link href="/posts">
-          <li className={`${pathname === "/posts" && BORDER}`}>Posts</li>
+          <li className={`${pathname.includes("/posts") && BORDER}`}>Posts</li>
         </Link>
         <Link href="/contact">
           <li className={`${pathname === "/contact" && BORDER}`}>Contact</li>

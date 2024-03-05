@@ -36,18 +36,12 @@ export default function MarkdownPost({ posts }: Props) {
         },
         img: (image: any) => (
           <Image
+            className="w-full max-h-96 object-cover my-2 rounded-xl"
             src={image.src || ""}
             alt={image.alt || ""}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{
-              width: "100%",
-              objectFit: "cover",
-              marginTop: "8px",
-              marginBottom: "8px",
-              borderRadius: "12px",
-            }}
+            width={760}
+            height={420}
+            priority
           />
         ),
       }}
