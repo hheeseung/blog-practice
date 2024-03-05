@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { SiVelog } from "react-icons/si";
 
@@ -9,12 +8,12 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold">Contact Me</h1>
         <p className="my-2">ssigu69@gmail.com</p>
         <div className="flex items-center justify-center space-x-5">
-          <Link href="https://github.com/hheeseung">
+          <a href="https://github.com/hheeseung">
             <FaGithub className="text-4xl" />
-          </Link>
-          <Link href="https://velog.io/@hheeseung/posts">
+          </a>
+          <a href="https://velog.io/@hheeseung/posts">
             <SiVelog className="text-4xl" />
-          </Link>
+          </a>
         </div>
         <p className="my-10 text-3xl font-bold">Or Send me Email</p>
       </div>
