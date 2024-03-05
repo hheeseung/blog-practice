@@ -29,14 +29,14 @@ export default async function PostDetailPage({ params: { slug } }: Props) {
         }}
         priority
       />
-      <div className="relative px-5 py-10">
+      <article className="relative px-5 py-10">
         <span className="absolute right-6">{posts.date}</span>
         <h1 className="text-5xl font-bold">{posts.title}</h1>
         <p className="text-xl font-semibold border-b-2 border-sky-500 py-2 mb-2 w-fit">
           {posts.description}
         </p>
         <MarkdownPost posts={posts} />
-      </div>
+      </article>
       <PageNav path={slug} />
     </section>
   );
